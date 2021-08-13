@@ -11,7 +11,6 @@ class TodoContract extends Contract{
             }
         ]
         for (const task of tasks){
-            task.docType = "task";
             await ctx.stub.putState(task.id, Buffer.from(JSON.stringify(task)))
             console.info(`Task ${task.id} initialized`);
         }
@@ -34,8 +33,23 @@ class TodoContract extends Contract{
             id,
             title
         };
+        console.log("hahhahahhahah");
+        try{
+
+        
         await ctx.stub.putState(id, Buffer.from(JSON.stringify(task)));
         return JSON.stringify(task);
+    }
+    catch(err){
+        console.log(err);
+    }
+    }
+    async DeleteTask(ctx, id) {
+        const exists = await this.TaskExists(ctx, id);
+        if (!exists) {
+            throw new Error(`The task ${id} does not exist`);
+        }
+        return ctx.stub.deleteState(id);
     }
     async GetAllTasks(ctx) {
         const allResults = [];
