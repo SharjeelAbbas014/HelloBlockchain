@@ -2,18 +2,9 @@
 
 ## Introduction
 
-Basic folder structure setup (we'll add frontend in future branch). I haven't written any code yet, just a base line structure.
+Added Chaincode in chaincode-javascript
+Check chaincode-javascript/index.js, chaincode-javascript/lib/todoChainCode.js
 
-## Folder Structure
+## Note
 
-### application-javascript
-
-Here we will be storing application stuff where node server will make requests to smart contract/chaincode implementation fabric-ca-client fabric-network
-
-### chaincode-javascript
-
-Blockchain app logic will store here currently have only 2 node module dependencies fabric-contract-api fabric-shim
-
-### hyperledger-fabric-network
-
-Hyperledger Fabric framework copied from hyperledger git repo as explained in documentation
+There are two more folders named bin, config to run network copy it from hyperledger fabric github repo
