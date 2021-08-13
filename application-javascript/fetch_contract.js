@@ -43,7 +43,7 @@ async function getContract() {
 
 			const contract = network.getContract(chaincodeName);
 			/* END COPIED FROM DOCUMENTATION */
-			// await contract.submitTransaction('InitLedger');
+			await contract.submitTransaction('InitLedger');
             return contract;
 		
 	} catch (error) {
