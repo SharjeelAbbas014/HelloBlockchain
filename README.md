@@ -2,9 +2,17 @@
 
 ## Introduction
 
-Added Chaincode in chaincode-javascript
-Check chaincode-javascript/index.js, chaincode-javascript/lib/todoChainCode.js
+Added Application Code in application-javascript
+Check
 
-## Note
+### application-javascript/index.js
 
-There are two more folders named bin, config to run network copy it from hyperledger fabric github repo
+It host express app and make calls to the chain code with the help of fetch_contract file
+
+### application-javascript/lib/AppUtil.js //From Documentation
+
+### application-javascript/lib/CAUtil.js //From Documentation
+
+### application-javascript/fetch_contract //From Documentation
+
+Have initialization and connection info to the chaincode

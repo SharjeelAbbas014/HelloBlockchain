@@ -1,5 +1,5 @@
 
-const assetTransfer = require('./lib/todoChainCode');
+const TodoContract = require('./lib/todoChainCode');
 
-module.exports.AssetTransfer = assetTransfer;
-module.exports.contracts = [assetTransfer];
+module.exports.TodoContract = TodoContract;
+module.exports.contracts = [TodoContract];
